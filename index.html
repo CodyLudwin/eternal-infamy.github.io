@@ -47,7 +47,7 @@
       top: 0;
       z-index: 20;
     }
-
+	
     nav {
       max-width: var(--max);
       margin: 0 auto;
@@ -133,8 +133,46 @@
       max-width: 520px;
     }
 
-    /* ─── Page cards section ────────────────────────── */
-    .pages-heading {
+	/* ─── Store section ────────────────────────── */
+	.store-heading {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+	
+	.store-banner { 
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 65%;
+	}
+
+
+    /* ─── Log cards section ────────────────────────── */
+    .logs-heading {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+	  padding-top: 20px;
+    }
+
+    .logs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 1rem;
+    }
+	
+	.logs-footing {
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.09em;
@@ -145,14 +183,8 @@
       margin-bottom: 1.5rem;
     }
 
-    .pages-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-      gap: 1rem;
-    }
-
-    /* ─── Individual page card ──────────────────────── */
-    .page-card {
+    /* ─── Individual Log card ──────────────────────── */
+    .log-card {
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
@@ -165,7 +197,7 @@
       transition: border-color 0.14s, box-shadow 0.14s;
     }
 
-    .page-card:hover {
+    .log-card:hover {
       border-color: var(--accent);
       box-shadow: 0 2px 12px rgba(45,107,228,.09);
     }
@@ -204,7 +236,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .page-card { transition: none; }
+      .log-card { transition: none; }
     }
   </style>
 </head>
@@ -223,7 +255,7 @@
       <ul class="nav-links">
         <li><a href="index.html" aria-current="page">Home</a></li>
         <!-- ADD NAV LINKS BELOW — copy a line and change the href + label -->
-        <li><a href="Fate 6-10 - WvW Log Summary — WVW Log Review.html">Fate 6-10 - WvW Log Summary — WVW Log Review</a></li>  
+        <li><a href="Fight Logs.html">All Fight Logs</a></li>  
         <!-- <li><a href="blog.html">Blog</a></li>     -->
         <!-- <li><a href="contact.html">Contact</a></li> -->
       </ul>
@@ -236,11 +268,22 @@
          HERO  — edit the title and description
          ════════════════════════════════════════════════════ -->
     <section class="hero">
-      <span class="hero-kicker">Welcome</span>
+      <span class="hero-kicker">[Fate]</span>
       <!-- ★ SITE TITLE -->
-      <h1>Welcome to the Fate Webpage</h1>
+      <h1>Eternal Infamy Webpage</h1>
       <!-- ★ Change this to a short description of your site -->
       <p>Fate Fight Logs and Stuff</p>
+    </section>
+
+
+<section aria-label="store">
+      <p class="store-heading"> <strong> Grab some merch from the Fate store!!! </strong> </p>
+		<a target="_blank" rel="noopener noreferrer" href="https://eternal-infamy.printify.me/">
+			<img class="store-banner" src="Store_Banner.jpg">
+		</a>
+      <div>
+	  </div>
+	
     </section>
 
     <!-- ════════════════════════════════════════════════════
@@ -261,49 +304,35 @@
 
          6. Commit / push — GitHub Pages does the rest.
          ════════════════════════════════════════════════════ -->
-    <section aria-label="Pages">
-      <p class="pages-heading">Pages</p>
-      <div class="pages-grid">
+    <section aria-label="logs">
+      <p class="logs-heading"> <strong> LATEST WvW Log Summary — WVW Log Review </strong> </p>
+      <div class="logs-grid">
 
-        <!-- ★ EXAMPLE CARD — uncomment, then edit href / emoji / title / desc -->
-        <a class="page-card" href="Fate 6-10 - WvW Log Summary — WVW Log Review.html">
+        <!-- ★ CARD 1 — uncomment, then edit href / emoji / title / desc -->
+        <a class="log-card" href="Fate 6-10 - WvW Log Summary — WVW Log Review.html">
           <span class="card-emoji">⚔️</span>
           <span class="card-title">Fate 6-10</span>
           <span class="card-desc">Fate 6-10 - WvW Log Summary — WVW Log Review</span>
         </a>
 
-        <!-- ★ EXAMPLE CARD
-        <a class="page-card" href="projects.html">
-          <span class="card-emoji">🗂️</span>
-          <span class="card-title">Projects</span>
-          <span class="card-desc">A collection of things I've built.</span>
+        <!-- ★ CARD 2 -->
+        <a class="log-card" href="Fate 6-8 - WvW Log Summary — WVW Log Review.html">
+          <span class="card-emoji">⚔️</span>
+          <span class="card-title">Fate 6-8</span>
+          <span class="card-desc">Fate 6-8 - WvW Log Summary — WVW Log Review</span>
         </a>
-        -->
 
-        <!-- ★ EXAMPLE CARD
-        <a class="page-card" href="contact.html">
-          <span class="card-emoji">✉️</span>
-          <span class="card-title">Contact</span>
-          <span class="card-desc">How to get in touch with me.</span>
+        <!-- ★ CARD 3 -->
+        <a class="log-card" href="Fate 6-7 - WvW Log Summary — WVW Log Review.html">
+          <span class="card-emoji">⚔️</span>
+          <span class="card-title">Fate 6-7</span>
+          <span class="card-desc">Fate 6-7 - WvW Log Summary — WVW Log Review</span>
         </a>
-        -->
-
-        <!-- Placeholder shown when no cards are uncommented yet -->
-        <div style="
-          grid-column: 1 / -1;
-          border: 1px dashed var(--rule);
-          border-radius: var(--radius);
-          padding: 2rem 1.5rem;
-          color: var(--muted);
-          font-size: 0.875rem;
-          line-height: 1.7;
-        ">
-          <strong style="color:var(--ink)">No pages linked yet.</strong><br>
-          Uncomment one of the example <code>&lt;a class="page-card"&gt;</code> blocks
-          above and upload a matching <code>.html</code> file to add your first page.
-        </div>
-
-      </div>
+	</div>
+	<div class="logs-footing" style="padding-top: 10px; text-align: center;">
+		<p> To see addition fight logs check out the <a href="Fight Logs.html"> Fight Logs</a> page</p>
+	</div>
+	
     </section>
 
   </main>
